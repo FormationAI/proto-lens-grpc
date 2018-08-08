@@ -1,0 +1,50 @@
+name:                proto-lens-grpc
+version:             0.1.0.0
+github:              "FormationAI/proto-lens-grpc"
+license:             BSD3
+# author:              "Author name here"
+# maintainer:          "example@example.com"
+# copyright:           "2018 Author name here"
+
+extra-source-files:
+- README.md
+- ChangeLog.md
+- third_party/googleapis/google/rpc/status.proto
+
+description:         Please see the README on GitHub at <https://github.com/githubuser/proto-lens-grpc#readme>
+
+dependencies:
+- base >= 4.7 && < 5
+
+custom-setup:
+  dependencies:
+    - base
+    - Cabal
+    - proto-lens-setup == 0.4.*
+
+library:
+  source-dirs: src
+  dependencies:
+    - base >= 4.7 && < 5
+    - async
+    - bytestring
+    - case-insensitive
+    - containers
+    - exceptions
+    - grpc-haskell-core
+    - lens
+    - lens-labels
+    - proto-lens
+    - proto-lens-runtime
+    - proto-lens-protobuf-types
+    - retry
+    - text
+    - these
+    - transformers
+  exposed-modules:
+    - Platform.GRPC.Client
+    - Platform.GRPC.Data.ExtensibleRecord
+    - Platform.GRPC.LowLevelMagic
+    - Platform.GRPC.Magic
+    - Platform.GRPC.Server
+    - Proto.Google.Rpc.Status

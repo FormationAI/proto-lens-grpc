@@ -1,0 +1,23 @@
+resolver: lts-11.19
+
+packages:
+- .
+
+extra-deps:
+- git: https://github.com/awakesecurity/gRPC-haskell
+  commit: 5fd44880da343343a7a25ff0bc42e07c044432f7
+  subdirs:
+  - core
+- git: https://github.com/google/proto-lens
+  commit: 41a3717609ff302030fb246a807a346eb6e69f6e
+  subdirs:
+  - lens-labels
+  - proto-lens
+  - proto-lens-protoc
+  - proto-lens-runtime
+  - proto-lens-setup
+  - proto-lens-protobuf-types
+# Satisfy grpc-haskell-core's test bounds
+- tasty-0.11.3
+- tasty-hunit-0.9.2
+- tasty-quickcheck-0.8.4
