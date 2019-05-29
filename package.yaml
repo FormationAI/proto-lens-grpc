@@ -1,17 +1,16 @@
 name:                proto-lens-grpc
-version:             0.1.0.0
+version:             0.1
 github:              "FormationAI/proto-lens-grpc"
 license:             BSD3
-# author:              "Author name here"
-# maintainer:          "example@example.com"
-# copyright:           "2018 Author name here"
+author:              Formation
+copyright:           (c) 2017-2019 Formation
 
 extra-source-files:
 - README.md
 - ChangeLog.md
 - third_party/googleapis/google/rpc/status.proto
 
-description:         Please see the README on GitHub at <https://github.com/githubuser/proto-lens-grpc#readme>
+description: gRPC support for proto-lens using grpc-haskell-core.
 
 dependencies:
 - base >= 4.7 && < 5
@@ -42,9 +41,9 @@ library:
     - these
     - transformers
   exposed-modules:
-    - Platform.GRPC.Client
-    - Platform.GRPC.Data.ExtensibleRecord
-    - Platform.GRPC.LowLevelMagic
-    - Platform.GRPC.Magic
-    - Platform.GRPC.Server
+    - Data.ProtoLens.GRPC.Client
+    - Data.ProtoLens.GRPC.Data.ExtensibleRecord
+    - Data.ProtoLens.GRPC.LowLevelMagic
+    - Data.ProtoLens.GRPC.Magic
+    - Data.ProtoLens.GRPC.Server
     - Proto.Google.Rpc.Status

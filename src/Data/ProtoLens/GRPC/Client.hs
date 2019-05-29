@@ -3,7 +3,7 @@
 {-# LANGUAGE OverloadedLabels #-}
 {-# LANGUAGE ScopedTypeVariables #-}
 {-# LANGUAGE TypeApplications #-}
-module Platform.GRPC.Client (
+module Data.ProtoLens.GRPC.Client (
   -- * Client implementation
     MethodType (..)
   , method

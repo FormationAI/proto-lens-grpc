@@ -11,7 +11,7 @@
 {-# LANGUAGE TypeOperators                      #-}
 {-# OPTIONS_GHC -fno-warn-redundant-constraints #-} -- Getter requires this
 
-module Platform.GRPC.Data.ExtensibleRecord
+module Data.ProtoLens.GRPC.Data.ExtensibleRecord
   ( Record ()
   , safeFind
   , method

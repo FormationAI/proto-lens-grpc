@@ -18,7 +18,7 @@
 {-# OPTIONS_GHC -fno-warn-redundant-constraints          #-}
 {-# OPTIONS_GHC -fno-warn-unticked-promoted-constructors #-}
 
-module Platform.GRPC.Magic
+module Data.ProtoLens.GRPC.Magic
   ( Client ()
   , protoToDomainType
   , method
@@ -61,13 +61,13 @@ import           Data.ProtoLens.Service.Types ( MethodInput
 import           Data.Proxy (Proxy (..))
 import           Data.These (These(..))
 import           GHC.TypeLits
-import           Platform.GRPC.Data.ExtensibleRecord ( Record
+import           Data.ProtoLens.GRPC.Data.ExtensibleRecord ( Record
                                                      , WrappedMethodName (..)
                                                      , Lookup
                                                      , safeFind
                                                      , method
                                                      , service)
-import           Platform.GRPC.LowLevelMagic (clientReader')
+import           Data.ProtoLens.GRPC.LowLevelMagic (clientReader')
 import qualified Network.GRPC.LowLevel as GL
 import           Network.GRPC.LowLevel ( GRPCIOError (..)
                                        , MethodName (..)
@@ -77,7 +77,7 @@ import           Network.GRPC.LowLevel ( GRPCIOError (..)
 import qualified Network.GRPC.LowLevel as LL
 import           Network.GRPC.LowLevel.Client (clientRW', clientWriterCmn)
 import           Network.GRPC.LowLevel.Client.Unregistered (clientRequest, withClientCall)
-import           Platform.GRPC.Server hiding (ServerHandler, ServerReaderHandler, ServerWriterHandler, ServerRWHandler)
+import           Data.ProtoLens.GRPC.Server hiding (ServerHandler, ServerReaderHandler, ServerWriterHandler, ServerRWHandler)
 import           Unsafe.Coerce (unsafeCoerce)
 
 

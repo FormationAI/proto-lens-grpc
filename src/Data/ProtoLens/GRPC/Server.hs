@@ -18,7 +18,7 @@
 {-# LANGUAGE TypeApplications        #-}
 
 
-module Platform.GRPC.Server
+module Data.ProtoLens.GRPC.Server
   ( AnyHandler(..)
   , Handler(..)
   , ServerOptions(..)
